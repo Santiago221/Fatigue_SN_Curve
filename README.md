@@ -3,3 +3,5 @@ An S-N curve defines the number of cycles to failure,  N ( S ) , when a material
 
 To better understand the phenomenon of fatigue check the link below:
 https://en.wikipedia.org/wiki/Fatigue_(material)
+
+# How to Use: 
