@@ -122,7 +122,7 @@ class SN:
         x = self.df[['N']].values.T[0]
         y = self.df[['S']].values.T[0]
         fig, ax = plt.subplots()    
-        ax.plot(x,y,'k--')
+        ax.loglog(x,y,'k--')
         ax.grid()
         ax.set_xlabel('Cycles')
         ax.set_ylabel('Strength [MPa]')
@@ -144,5 +144,6 @@ sut = float(input('Sut [MPa]:'))
 T = float(input('Temperature [ºC]:'))
 s = str(input('Surface Finish [Rectified, Machined or cold drawn , Hot Rolled, Forged]:'))
 c = str(input('Reliability [50,90,95,99,99.9,99.99,99.999,99.9999 - sem o %]:'))
-aco = SN(material,sut,T,s,c+'%',10000000)
+aco = SN(material,sut,T,s,c+'%',1E6)
+aco.WriteFile()
 input()
